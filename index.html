@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Ngoc Dang Nguyen - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Loading Modal -->
+    <div class="loading-modal" id="loading-modal">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-text">
+                <h3>Loading...</h3>
+                <p>The demo is starting up. It may take about 30 seconds if the server is in sleep mode.</p>
+                <p>A new tab will open to display the demo.</p>
+            </div>
+            <button class="close-modal" id="close-modal">Close</button>
+        </div>
+    </div>
+    
+    <!-- Floating Social Links -->
+    <div class="floating-social">
+        <a href="https://github.com/ngocdangnguyen-ng" class="floating-social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+            <span class="link-text">GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/ngocnguyen-fr/" class="floating-social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin-in"></i>
+            <span class="link-text">LinkedIn</span>
+        </a>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="logo">Nguyen N.D. Nguyen</div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Nguyen Ngoc<br>Dang Nguyen</h1>
+                    <div class="subtitle">AI & ML Enthusiast</div>
+                    <p class="description">Turning data into intelligent solutions. Passionate about AI research and applications in the real world.</p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn">
+                            <i class="fas fa-arrow-down"></i>
+                            View Work
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+                <div class="avatar-container">
+                    <img src="images/profile.jpeg" alt="Nguyen Ngoc Dang Nguyen" class="avatar">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title fade-in">About</h2>
+            <div class="about-content fade-in">
+                <div class="about-text">Third-year Computer Science student specializing in machine learning and deep learning. Experienced in computer vision and NLP projects, aiming to pursue graduate studies in AI with a focus on reinforcement learning and generative models.</div>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number">6</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Years of Study</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title fade-in">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3>Programming</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Data Structures & Algorithms</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Machine Learning</h3>
+                    <ul class="skill-list">
+                        <li>TensorFlow / Keras</li>
+                        <li>PyTorch</li>
+                        <li>Computer Vision</li>
+                        <li>Natural Language Processing</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Data Science</h3>
+                    <ul class="skill-list">
+                        <li>Pandas / NumPy</li>
+                        <li>Matplotlib / Seaborn</li>
+                        <li>Jupyter Notebook</li>
+                        <li>SQL (MySQL, PostgreSQL)</li>
+                    </ul>
+                </div>
+                <div class="skill-category fade-in">
+                    <h3>Deployment</h3>
+                    <ul class="skill-list">
+                        <li>HTML & CSS</li>
+                        <li>Flask / FastAPI</li>
+                        <li>Git / GitHub</li>
+                        <li>Cloud Platforms (AWS, GCP)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/house-price.png" alt="House Price Prediction">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ngocdangnguyen-ng/house-price-prediction" class="btn">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="https://house-price-prediction-b8la.onrender.com" class="btn demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">House Price Prediction</h3>
+                        <p class="project-description">Machine learning project predicting housing prices with regression models and feature engineering on Kaggle dataset.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">pandas</span>
+                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">Flask</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/flowers.png" alt="Flowers Recognition">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ngocdangnguyen-ng/flowers-recognition" class="btn">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="https://github.com/ngocdangnguyen-ng/task-management" class="btn demo-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Flowers Recognition</h3>
+                        <p class="project-description">Deep learning CNN model classifying multiple flower species with high accuracy and data augmentation.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Keras</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">OpenCV</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/sentiment.png" alt="IMDb Sentiment Analysis">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ngocdangnguyen-ng/IMDb-sentiment-analysis" class="btn">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="https://imdb-sentiment-analysis-0ec4.onrender.com" class="btn" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">IMDb Sentiment Analysis</h3>
+                        <p class="project-description">NLP project comparing machine learning and deep learning approaches for sentiment analysis on movie reviews.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card fade-in">
+                    <div class="project-image">
+                        <img src="images/projects/recipe.png" alt="Recipe Recommender">
+                        <div class="project-overlay">
+                            <a href="https://github.com/ngocdangnguyen-ng/recipe-recommender" class="btn">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="https://github.com/ngocdangnguyen-ng/recipe-recommender" class="btn">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Recipe Recommender</h3>
+                        <p class="project-description">Flask web app recommending personalized recipes based on user-provided ingredients and filtering.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">Redis</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Contact</h2>
+            <div class="contact-content">
+                <div class="contact-info fade-in">
+                    <h3>Get in Touch</h3>
+                    <p>Open to internships, research collaborations, and discussions around AI. Let’s connect and build the future together !</p>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:nguyen@example.com">nndnguyen2016@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+84123456789">+33 7 48 75 68 88</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Aix-en-Provence, France</span>
+                    </div>
+                </div>
+
+                <div class="contact-form fade-in">
+                    <!-- Success Message -->
+                    <div id="formSuccess" class="form-success" style="display: none;">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your message has been sent successfully. I'll get back to you soon.</p>
+                        <button class="btn" id="resetForm">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Another Message
+                        </button>
+                    </div>
+                    
+                    <form id="contactForm" action="https://formspree.io/f/mblaenzb" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="_replyto" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <!-- Anti-spam honeypot field -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        
+                        <!-- Use AJAX format for responses -->
+                        <input type="hidden" name="_format" value="json">
+                        
+                        <button type="submit" class="btn" id="submitBtn">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Nguyen Ngoc Dang Nguyen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
