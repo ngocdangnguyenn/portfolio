@@ -29,7 +29,7 @@ portfolio/
 
 ## Live Demo
 
-Visit the live portfolio: [https://ngocdangnguyen-ng.github.io/portfolio/](https://ngocdangnguyen-ng.github.io/portfolio/)
+Visit the live portfolio: [https://portfolio-qyyg.onrender.com/](https://portfolio-qyyg.onrender.com/)
 
 ## About Me
 
