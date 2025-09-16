@@ -60,23 +60,9 @@ document.querySelectorAll('.fade-in').forEach(el => {
 // Form submission with Formspree
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.getElementById('contactForm');
-    const formSuccess = document.getElementById('formSuccess');
-    if (!contactForm || !formSuccess) return;
+    if (!contactForm) return;
     
-    // Reset form button event
-    const resetFormBtn = document.getElementById('resetForm');
-    if (resetFormBtn) {
-        resetFormBtn.addEventListener('click', function() {
-            formSuccess.style.display = 'none';
-            contactForm.style.display = 'grid';
-            contactForm.reset();
-        });
-    }
-    
-    // Form submit handling
     contactForm.addEventListener('submit', function(e) {
-        e.preventDefault(); // Prevent default form submission
-        
         // Get form data for validation
         const name = this.querySelector('#name').value;
         const email = this.querySelector('#email').value;
@@ -85,54 +71,29 @@ document.addEventListener('DOMContentLoaded', function() {
         
         // Simple validation
         if (!name || !email || !subject || !message) {
+            e.preventDefault();
             alert('Please fill in all fields.');
             return;
         }
         
         // Show sending feedback
-        const submitBtn = document.getElementById('submitBtn');
+        const submitBtn = this.querySelector('button[type="submit"]');
         const originalText = submitBtn.innerHTML;
         
         submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
         submitBtn.disabled = true;
         
-        // Send form data to Formspree using fetch API
-        const formData = new FormData(contactForm);
+        // Allow the form to continue submitting to Formspree
+        // We don't prevent default here because we want the form to actually submit
+        console.log('Form is being submitted to Formspree...');
         
-        fetch(contactForm.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
+        // Reset button after 5 seconds if for some reason the form doesn't redirect
+        setTimeout(() => {
+            if (document.body.contains(submitBtn)) {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
-        })
-        .then(response => {
-            if (response.ok) {
-                return response.json();
-            }
-            throw new Error('Network response was not ok.');
-        })
-        .then(data => {
-            console.log('Form submission successful!');
-            
-            // Hide the form and show success message
-            contactForm.style.display = 'none';
-            formSuccess.style.display = 'block';
-            
-            // Scroll to success message
-            formSuccess.scrollIntoView({ behavior: 'smooth' });
-            
-            // Reset the form for future use
-            contactForm.reset();
-        })
-        .catch(error => {
-            console.error('Error submitting form:', error);
-            alert('There was a problem sending your message. Please try again.');
-            
-            // Reset button state
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-        });
+        }, 5000);
     });
 });
 

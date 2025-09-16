@@ -289,19 +289,6 @@
                 </div>
 
                 <div class="contact-form fade-in">
-                    <!-- Success Message -->
-                    <div id="formSuccess" class="form-success" style="display: none;">
-                        <div class="success-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h3>Thank You!</h3>
-                        <p>Your message has been sent successfully. I'll get back to you soon.</p>
-                        <button class="btn" id="resetForm">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Another Message
-                        </button>
-                    </div>
-                    
                     <form id="contactForm" action="https://formspree.io/f/mblaenzb" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
@@ -326,10 +313,10 @@
                         <!-- Anti-spam honeypot field -->
                         <input type="text" name="_gotcha" style="display:none">
                         
-                        <!-- Use AJAX format for responses -->
-                        <input type="hidden" name="_format" value="json">
+                        <!-- Redirect after submission -->
+                        <input type="hidden" name="_next" value="https://ngocdangnguyen-ng.github.io/portfolio/thank-you.html">
                         
-                        <button type="submit" class="btn" id="submitBtn">
+                        <button type="submit" class="btn">
                             <i class="fas fa-paper-plane"></i>
                             Send Message
                         </button>
