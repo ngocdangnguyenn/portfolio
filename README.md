@@ -38,4 +38,4 @@ I'm a third-year Computer Science student specializing in machine learning and d
 ## Contact
 
 - **Email**: [nndnguyen2016@gmail.com](mailto:nndnguyen2016@gmail.com)
-- **LinkedIn**: [https://www.linkedin.com/in/ngocnguyen-fr](https://www.linkedin.com/in/ngocnguyen-fr)
+- **LinkedIn**: [https://www.linkedin.com/in/ngocdangnguyenn](https://www.linkedin.com/in/ngocdangnguyenn)
